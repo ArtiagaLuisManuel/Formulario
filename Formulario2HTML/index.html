@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/styles.css">
+    <title>Formulario</title>
+</head>
+<body>
+        <div>
+            <h1>FORMULARIO </h1>
+        </div>
+        <form action="ventana2.html" method="POST" class="formulario" id="formulario">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" size="20" id="nombre">
+            <br/>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" name="apellidos" size="40" id="apellidos">
+            <br/>
+            <label for="edad">Edad:</label>
+            <input type="number" name="edad" min="1" max="100" id="edad">
+            <br/>
+            <label for="sexo">Sexo:</label>
+            <input type="radio" name="sexo" value="Varón"> Varón
+            <input type="radio" name="sexo" value="Mujer"> Mujer<br/>
+            <label for="calle">Calle:</label>
+            <input type="text" name="calle" size="40" id="calle">
+            <br/>
+            <label for="colonia">Colonia:</label>
+            <input type="text" name="colonia" size="40" id="colonia">
+            <br/>
+            <label for="numero">numero:</label>
+            <input type="number" name="numero" class="tamano" id="numero" min="0">
+            <label for="cp">CP:</label>
+            <input type="number" name="cp" size="5" class="tamano" id="cp">
+            <br/>
+            <label for="celular">Numero de celular:</label>
+            <input type="number" name="celular" id="celular">
+            <br/>
+            <p>FECHA DE NACIMIENTO</p>
+            <label for="ao">Año</label>
+            <input type="number" name="ao" min="1900" max="2023" id="ao">
+            <br/>
+            <label for="mes">Mes</label>
+            <input type="number" name="mes" min="1" max="12" id="mes">
+            <br/>
+            <label for="dia">Dia</label>
+            <input type="number" name="dia" min="1" max="31" id="dia">
+            <br/>
+            <br/>
+            <h2>GUSTOS PERSONALES</h2>
+            <BR/>
+            <input type="checkbox" id="gustos1" name="gustos1" value="leer">
+            <label for="gustos1">Leer</label>
+            <br/>
+            <input type="checkbox" id="gustos2" name="gustos2" value="dormir">
+            <label for="gustos2">Dormir</label>
+            <br/>
+            <input type="checkbox" id="gustos3" name="gustos3" value="comprar articulos">
+            <label for="gustos3">Comprar articulos</label>
+            <br/>
+            <input type="checkbox" id="gustos4" name="gustos4" value="salir de casa">
+            <label for="gustos4">Salir de casa</label>
+            <br/>
+            <input type="checkbox" id="gustos5" name="gustos5" value="viajar">
+            <label for="gustos5">Viajar</label>
+            <br/>
+
+
+            <fieldset>
+                <legend>Comida favorita</legend>
+                    <select name="comida favorita" id="comida-favorita">
+                        <option>Tacos</option>
+                        <option>Pizza</option>
+                        <option>Hamburguesas</option>
+                        <option>Spaguetti</option>
+                        <option>Carne asada</option>
+                        <option>Camarones</option>
+                        <option>Sopa</option>  
+                    </select>
+            </fieldset>
+            <br/>
+
+            <fieldset>
+                <legend>Deportes (Puedes seleccionar mas de 1)</legend>
+                <select name="Deportes (Puedes seleccionar mas de 1)" size="3" multiple="multiple">
+                    <option>Futbol</option>
+                    <option>Atletismo</option>
+                    <option>Voleiball</option>
+                    <option>Basketball</option>
+                    <option>Tennis</option>
+                    <option>Ajedrez</option>
+                    <option>Natacion</option> 
+                </select>
+            </fieldset>
+            <br/>
+
+            <fieldset>
+                <legend>Género de películas</legend>
+                <select name="Genero de peliculas" id="genero-peliculas">
+                    <option>Acción</option>
+                    <option>Aventuras</option>
+                    <option>Ciencia Ficción</option>
+                    <option>Comedia</option>
+                    <option>Drama</option>
+                    <option>Fantasía</option>
+                    <option>Musical</option>  
+                </select>
+            </fieldset>
+            <br/>
+
+            <fieldset>
+                <legend>¿QUE PELÍCULA TE GUSTA?</legend>
+                <select name="¿QUE PELÍCULA TE GUSTA?" id="pelicula-favorita">
+                    <option>Salvando al soldado Ryan</option>
+                    <option>Parasitos</option>
+                    <option>Chicas malas</option>
+                    <option>Los cazafantasmas</option>
+                    <option>El planeta de los simios</option>
+                    <option>Pulp fiction</option>
+                    <option>Star wars</option>  
+                </select>
+            </fieldset>
+            <br/>
+
+            <label for="Actividades" class="pregunta" >¿Qué actividades realizas en el día?</label>
+            <br/>
+            <textarea name="Actividades" rows="5" cols="50" id="preguntaActividad">
+
+            </textarea>
+            <br/>
+            <label for="Actividades2" class="pregunta" >¿A qué te dedicas?</label>
+            <br/>
+            <textarea name="Actividades2" rows="5" cols="50" id="preguntaDedicas">
+
+            </textarea>
+            <br/>
+
+            <label for="imagen" id="imagenPerfil">Selecciona una imagen como foto de perfil:</label>
+            <input type="file" id="imagen" name="imagen" accept="image/jpeg">
+            <br/>
+
+            <div class="boton">
+                <button type="submit">ENVIAR</button>
+                <button type="reset">LIMPIAR</button>
+            </div>
+            <br/>
+            <p class="warnings" id="warnings"></p>
+        </form>
+
+        <script src="js/validaciones.js"></script>
+</body>
+</html>
+
+
