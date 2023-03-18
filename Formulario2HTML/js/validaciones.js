@@ -13,6 +13,7 @@ const dia = document.getElementById('dia')
 const parrafo = document.getElementById('warnings')
 const enviado = document.getElementById('formulario');
 
+
 enviado.addEventListener("submit", e =>{
     console.log("submit activado");
     e.preventDefault()
@@ -111,11 +112,16 @@ enviado.addEventListener("submit", e =>{
         const actividad = document.getElementById("preguntaActividad").value;
         const dedicas = document.getElementById("preguntaDedicas").value;
 
-        
 
         //Creamos una ventana que contendra la informaci'on recolectada del formulario
         const newWindow = window.open("", "newWindow", "width=1100,height=600");
         newWindow.document.write(`<h1>Datos de contacto</h1>`);
+        
+        //
+        agregarImagen();
+  // Agregar los elementos de texto a la ventana
+  
+        
         newWindow.document.write(`<table>`);
     //Encabezados
     newWindow.document.write(`<tr>`);
@@ -163,15 +169,31 @@ enviado.addEventListener("submit", e =>{
     newWindow.document.write(`</tr>`);
     
     newWindow.document.write(`</table>`);
-        
-
+     
+    
+    //
+    
         
           
     }
     //console.log(warnings);
-})
 
+});
 
+const inputFile = document.getElementById("imagen");
+inputFile.addEventListener("change", function() {
+  const previewImage = document.getElementById("preview-image");
+  const file = inputFile.files[0];
+  const reader = new FileReader();
+  reader.onloadend = function() {
+    previewImage.src = reader.result;
+  }
+  if (file) {
+    reader.readAsDataURL(file);
+  } else {
+    previewImage.src = "";
+  }
+});
 
 
 

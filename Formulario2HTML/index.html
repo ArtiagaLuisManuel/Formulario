@@ -137,7 +137,9 @@
             <br/>
 
             <label for="imagen" id="imagenPerfil">Selecciona una imagen como foto de perfil:</label>
-            <input type="file" id="imagen" name="imagen" accept="image/jpeg">
+          
+            <input type="file" id="imagen" name="imagen" accept="image/jpeg" onchange="mostrarImagen()">
+            
             <br/>
 
             <div class="boton">
@@ -147,8 +149,11 @@
             <br/>
             <p class="warnings" id="warnings"></p>
         </form>
-
+        <div id="preview">Vista previa: 
+            <img id="preview-image" src="#" alt="Imagen subida">
+        </div>
         <script src="js/validaciones.js"></script>
+
 </body>
 </html>
 
